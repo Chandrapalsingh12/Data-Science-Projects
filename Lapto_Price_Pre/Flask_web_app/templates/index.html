@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laptop Price Predicator</title>
+</head>
+<body>
+    <h1>Laptop Price</h1>
+    <h2>Predicted Price is : {{Price}}</h2>
+
+    <form action= {{ url_for("home") }} , method="post">
+
+    
+    <label for="Laptop">Brand:</label>
+    <select name="brand" id="cars">
+      {% for i in brand %}
+      <option value={{i}}>{{i}}</option>
+      {% endfor %}
+    </select>
+    <br>
+
+    <label for="Type">Type:</label>
+    <select name="Type" id="cars">
+      {% for i in Type %}
+      <option value={{i}}>{{i}}</option>
+      {% endfor %}
+    </select>
+    <br>
+    
+    <label for="Inches">Inches:</label>
+    <select name="Inches" id="cars">
+      {% for i in Inches %}
+      <option value={{i}}>{{i}}</option>
+      {% endfor %}
+    </select>
+    <br>
+
+    <label for="Resolution">Resolution:</label>
+    <select name="Resolution" id="cars">
+      {% for i in Resolution %}
+      <option value={{i}}>{{i}}</option>
+      {% endfor %}
+    </select>
+    <br> 
+    
+    <label for="Ram">Ram:</label>
+    <select name="Ram" id="cars">
+      {% for i in Ram %}
+      <option value={{i}}>{{i}}</option>
+      {% endfor %}
+    </select>
+    <br>
+
+    <label for="OpSys">OpSys:</label>
+    <select name="OpSys" id="cars">
+      {% for i in OpSys %}
+      <option value={{i}}>{{i}}</option>
+      {% endfor %}
+    </select>
+    <br>
+
+    <label for="Weight">Weight:</label>
+    <select name="Weight" id="cars">
+      {% for i in Weight %}
+      <option value={{i}}>{{i}}</option>
+      {% endfor %}
+    </select>
+    <br>
+    
+    <label for="Touchscreen">Touchscreen:</label>
+    <select name="Touchscreen" id="cars">
+      {% for i in Touchscreen %}
+      <option value={{i}}>{{i}}</option>
+      {% endfor %}
+    </select>
+    <br>
+
+    <label for="Ips_Panel">Ips_Panel:</label>
+    <select name="Ips_Panel" id="cars">
+      {% for i in Ips_Panel %}
+      <option value={{i}}>{{i}}</option>
+      {% endfor %}
+    </select>
+    <br>
+
+    <label for="Ghz">Ghz:</label>
+    <select name="Ghz" id="cars">
+      {% for i in Ghz %}
+      <option value={{i}}>{{i}}</option>
+      {% endfor %}
+    </select>
+    <br>
+
+    <label for="Processor_Name">Processor_Name:</label>
+    <select name="Processor_Name" id="cars">
+      {% for i in Processor_Name %}
+      <option value={{i}}>{{i}}</option>
+      {% endfor %}
+    </select>
+    <br>
+
+    <label for="Processor_Generation">Processor_Generation:</label>
+    <select name="Processor_Generation" id="cars">
+      {% for i in Processor_Generation %}
+      <option value={{i}}>{{i}}</option>
+      {% endfor %}
+    </select>
+    <br>
+
+    <label for="Storage_type">Storage_type:</label>
+    <select name="Storage_type" id="cars">
+      {% for i in Storage_type %}
+      <option value={{i}}>{{i}}</option>
+      {% endfor %}
+    </select>
+    <br>
+    
+    <label for="Storage_Size">Storage_Size:</label>
+    <select name="Storage_Size" id="cars">
+      {% for i in Storage_Size %}
+      <option value={{i}}>{{i}}</option>
+      {% endfor %}
+    </select>
+    <br>
+
+    <label for="Gpu_Brand">Gpu_Brand:</label>
+    <select name="Gpu_Brand" id="cars">
+      {% for i in Gpu_Brand %}
+      <option value={{i}}>{{i}}</option>
+      {% endfor %}
+    </select>
+    <br>
+
+    <label for="Gpu_Name">Gpu_Name:</label>
+    <select name="Gpu_Name" id="cars">
+      {% for i in Gpu_Name %}
+      <option value={{i}}>{{i}}</option>
+      {% endfor %}
+    </select>
+    <br>
+
+    <input type="submit">
+
+</form>
+
+
+
+
+
+    
+     
+</body>
+</html>
