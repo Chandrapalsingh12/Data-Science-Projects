@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <link rel="stylesheet" href="static/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <title>Olympic.ANY</title>
+</head>
+<body>
+
+    <div id="rc_logo">
+        <a href="/" title="Logo">Olympic.ANY</a>
+    </div>
+      
+    <div class="rc_nav" id="centered_nav">
+        <a href="/" title="Home">Medel</a>
+        <a href="/overall" title="Overall">Overall</a>
+        <a href="/country" title="Country">Country</a>
+        <a href="/athlete" title="Athlete">Athlete</a>
+        <a href="javascript:void(0);" title="Menu" style="font-size:18px;" class="icon" onclick="myFunction()">&#9776;</a>
+      </div>
+
+
+      <center>
+          <form action="{{ url_for("country")}}" method="post">
+                <h2>Select Country Name</h2>
+                <select name="country" id="Year">
+                    {% for i in c_name %}
+                    <option value={{i}}>{{i}}</option>
+                    {% endfor %}
+                </select>
+                <input type="submit">
+            </form>
+      </center>
+      
+
+      <center><h2>Total Medal Of {{cnme}} </h2></center>
+        <center><canvas id="country_medal" style="width:100%;max-width:1200px"></canvas></center>
+        <div id="c_year" class="hide">{{c_year}}</div>
+        <div id="c_medal" class="hide">{{c_medal}}</div>
+
+        <input type="checkbox" id="checkbox" class="checkbox" />
+		<label for="checkbox" class="switch_bg">
+			<div class="switch_slider"></div>
+			<div class="switch_button"></div>
+		</label>
+
+
+ 
+      <center>
+          <center><h1>Top 10 Athlete of {{cnme}} </h1></center>
+
+
+            {{data | safe}}
+    </center>
+
+    
+
+    
+
+
+<script src="static/country.js"></script>
+</body>
+</html>

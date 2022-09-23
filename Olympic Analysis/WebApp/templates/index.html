@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <link rel="stylesheet" href="static/style.css">
+    <title>Olympic.ANY</title>
+</head>
+<body>
+
+    <div id="rc_logo">
+        <a href="/" title="Logo">Olympic.ANY</a> <!-- Swap this placeholder out for your logo image -->
+      </div>
+      
+      <div class="rc_nav" id="centered_nav">
+        <a href="/" title="Home">Medel</a>
+        <a href="/overall" title="Overall">Overall</a>
+        <a href="/country" title="Country">Country</a>
+        <a href="/athlete" title="Athlete">Athlete</a>
+        <a href="javascript:void(0);" title="Menu" style="font-size:18px;" class="icon" onclick="myFunction()">&#9776;</a>
+      </div>
+      
+      <div class="rc_content">
+        <h3>Click on Submit to get values</h3>
+        <p>
+            <form action="{{ url_for("home")}}" method="post">
+                
+                <input type="hidden" name="Medel">
+                <label for="cars">Year</label>
+            <select name="year" id="Year">
+                {% for i in year %}
+                <option value={{i}}>{{i}}</option>
+                {% endfor %}
+            </select>
+
+            <label for="cars">Country</label>
+            <select name="country" id="Year">
+                {% for i in country %}
+                <option value={{i}}>{{i}}</option>
+                {% endfor %}
+            </select>
+
+            <input type="submit">
+
+
+            </form>
+        </p>
+
+        <p>
+            <div class="medal">
+                {{data | safe}}
+            </div>
+        </p>
+      </div>
+
+      <input type="checkbox" id="checkbox" class="checkbox" />
+		<label for="checkbox" class="switch_bg">
+			<div class="switch_slider"></div>
+			<div class="switch_button"></div>
+		</label>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <form action="{{ url_for("home")}}" method="post">
+        <div class="main">
+            <div class="left">
+                <h2>Select Option</h2>
+                    <input type="radio" id="html" name="Medel" value="Medal">
+                    <label for="html">Medel Talley</label><br>
+                    <a href="/overall" style="color: black;">Overall</a>
+                    
+            </div>
+
+            <label for="cars">Year</label>
+            <select name="year" id="Year">
+                {% for i in year %}
+                <option value={{i}}>{{i}}</option>
+                {% endfor %}
+            </select>
+
+            <label for="cars">Country</label>
+            <select name="country" id="Year">
+                {% for i in country %}
+                <option value={{i}}>{{i}}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <input type="submit">
+    </form> -->
+
+<script src="static/script.js"></script>
+    
+
+
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <link rel="stylesheet" href="static/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <title>Olympic.ANY</title>
+</head>
+<body>
+
+    <div id="rc_logo">
+        <a href="/" title="Logo">Olympic.ANY</a>
+    </div>
+    
+      
+    <div class="rc_nav" id="centered_nav">
+        <a href="/" title="Home">Medel</a>
+        <a href="/overall" title="Overall">Overall</a>
+        <a href="/country" title="Country">Country</a>
+        <a href="/athlete" title="Athlete">Athlete</a>
+        
+        <a href="javascript:void(0);" title="Menu" style="font-size:18px;" class="icon" onclick="myFunction()">&#9776;</a>
+    </div>
+
+        <center><h2>Athlete</h2></center>
+        <center><canvas id="athlete" style="width:100%;max-width:1200px"></canvas></center>
+        <div id="x1" class="hide">{{x1}}</div>
+        <div id="x2" class="hide">{{x2}}</div>
+        <div id="x3" class="hide">{{x3}}</div>
+        <div id="x4" class="hide">{{x4}}</div>
+
+
+        <center><h2>Athlete Male & Female</h2></center>
+        <center><canvas id="Gender" style="width:100%;max-width:1200px"></canvas></center>
+        <div id="Y" class="hide">{{Y}}</div>
+        <div id="X1" class="hide">{{X1}}</div>
+        <div id="X2" class="hide">{{X2}}</div>
+
+
+
+    
+
+        <input type="checkbox" id="checkbox" class="checkbox" />
+        <label for="checkbox" class="switch_bg">
+          <div class="switch_slider"></div>
+          <div class="switch_button"></div>
+        </label>
+
+
+
+
+
+<script src="static/athlete.js"></script>
+<script>
+    function myFunction() {
+        var x = document.getElementById("centered_nav");
+        if (x.className === "rc_nav") {
+          x.className += " responsive";
+        } else {
+          x.className = "rc_nav";
+        }
+      }
+      
+</script>
+</body>
+</html>

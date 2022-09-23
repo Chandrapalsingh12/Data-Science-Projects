@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <link rel="stylesheet" href="static/style.css">
+    <title>Olympic.ANY</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+</head>
+<body>
+    <div id="rc_logo">
+        <a href="/" title="Logo">Olympic.ANY</a>
+      </div>
+      
+      <div class="rc_nav" id="centered_nav">
+        <a href="/" title="Home">Medel</a>
+        <a href="/overall" title="Overall">Overall</a>
+        <a href="/country" title="Country">Country</a>
+        <a href="/athlete" title="Athlete">Athlete</a>
+        <a href="javascript:void(0);" title="Menu" style="font-size:18px;" class="icon" onclick="myFunction()">&#9776;</a>
+      </div>
+      
+      <div class="rc_content">
+        <h3>Click on Submit to get values</h3>
+        <p>
+            <div>
+                <span>Edition</span>
+                {{ed}}
+            </div>
+            <div>
+                <span>City</span>
+                {{cty}}
+            </div>
+            <div>
+                <span>Sport</span>
+                {{sport}}
+            </div>
+            <div>
+                <span>Event</span>
+                {{evt}}
+            </div>
+            <div>
+                <span>athlete</span>
+                {{ath}}
+            </div>
+            <div>
+                <span>Nation</span>
+                {{nt}}
+            </div>
+        </p>
+    <div>
+    </div>
+    <form action="{{ url_for("overall")}}" method="post">
+    <label for="cars">Sport</label>
+        <select name="sport" id="sport">
+            {% for i in sprt %}
+            <option value={{i}}>{{i}}</option>
+            {% endfor %}
+        </select>
+        <input type="submit">
+    </form>
+    <div class="medal">
+         <p><h1>Most Succesfull Athlete</h1></p>
+        {{data | safe}}
+    </div>
+
+    <button id="mode" onclick="toggleTheme()">Dark</button>
+
+<!-- Graph -->
+
+    <center><h2>Participating Nation Over the Years</h2></center>
+    <center><canvas id="myChart" style="width:100%;max-width:1200px"></canvas></center>
+    <div id="X" class="hide">{{X}}</div>
+    <div id="Y" class="hide">{{Y}}</div>
+
+    <center><h2>Event Over Years</h2></center>
+    <center><canvas id="myChart1" style="width:100%;max-width:1200px"></canvas></center>
+    <div id="X1" class="hide">{{X1}}</div>
+    <div id="Y1" class="hide">{{Y1}}</div>
+
+
+    <center><h2>Athletes Over the Years</h2></center>
+    <center><canvas id="myChart2" style="width:100%;max-width:1200px"></canvas></center>
+    <div id="X2" class="hide">{{X2}}</div>
+    <div id="Y2" class="hide">{{Y2}}</div>
+
+
+ 
+<script src="static/overall.js"></script>
+</body>
+</html>
